@@ -4,7 +4,8 @@ int main()
 {
 	int available[10],p[10],i,j,k,count,count1,nor,nop;
 	int need[10][10],allocated[10][10],maximum[10][10];
-
+	
+	r:;
 	printf("\nEnter number of process :");
 	scanf("%d",&nop);
 	printf("\nEnter  resources available : ");
@@ -79,5 +80,12 @@ int main()
 	{
 		printf("\nDeadlock, not in safe state ");
 	}
+	
+	char h;
+	printf("\nPress 'h' if you want to check another set of processes:");
+	scanf("%s",&h);
+	if(h=='h')
+		goto r;
+	
 	getch();
 }
